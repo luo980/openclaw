@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# 快速启动 openclaw，跳过 run-node.mjs 的编译检查
+# 用法: ./oc tui | ./oc agent | ./oc <任意子命令>
+exec node "$(dirname "$(readlink -f "$0")")/openclaw.mjs" "$@"
